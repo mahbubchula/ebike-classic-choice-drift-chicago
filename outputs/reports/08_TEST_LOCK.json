@@ -1,0 +1,11 @@
+{
+  "first_evaluated": "2026-11-09T18:05:07",
+  "model_sha256": {
+    "lgbm_main.txt": "7594004a9c7b2e54323e8aa92b7d90bcc05ed6289f2911ec33fcea47e0cb9d29",
+    "lgbm_main_plus_supply.txt": "62bf009c57c1658519abba9b31f009faab716a31d4c856c2530fe0580e00054c",
+    "lgbm_origin_only.txt": "80bf485f2a49aea8d82ca3693b02cac67fe2dc06bdc90efba31f6cde72d53651",
+    "logreg_main.joblib": "2a5d092d47662808cd953c8e4f4df565317de533fdc588c2e571863fd1d359ab",
+    "logreg_main_plus_supply.joblib": "4953455da57090b17075049d5be26d22be9d55fb631f10b410ab6a17c29a44df",
+    "logreg_origin_only.joblib": "ae5b21dff51d71e3d87439bfd86288bbbbd144582175cd1aea1844580af1484e"
+  }
+}

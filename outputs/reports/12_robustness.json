@@ -1,0 +1,16 @@
+{
+  "R1_top10_importance_main_plus_month": {
+    "dist_km": 0.1776,
+    "is_member": 0.1298,
+    "temp_c": 0.0886,
+    "hour": 0.0857,
+    "month": 0.075,
+    "o_dist_cbd_km": 0.0734,
+    "is_weekend": 0.0415,
+    "o_pct_hh_no_car": 0.0392,
+    "d_median_income": 0.0337,
+    "d_pct_hh_no_car": 0.0316
+  },
+  "R1_month_rank": 5,
+  "R1_share_explained_main_plus_month": 0.04524568870057064
+}

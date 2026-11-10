@@ -1,0 +1,10 @@
+feature_1,feature_2,abs_spearman_inner_train,decision
+temp_c,feels_like_c,0.981,drop feels_like_c
+o_median_age,o_pct_age_18_29,0.85,drop o_median_age
+d_median_age,d_pct_age_18_29,0.848,drop d_median_age
+day_of_week,is_weekend,0.799,drop day_of_week
+o_dist_cbd_km,o_job_density_km2,0.772,drop o_job_density_km2
+d_dist_cbd_km,d_job_density_km2,0.764,drop d_job_density_km2
+o_dist_cbd_km,d_dist_cbd_km,0.708,drop d_dist_cbd_km
+o_job_density_km2,o_pct_commute_walk,0.705,already resolved
+round_trip,same_tract,0.702,drop same_tract

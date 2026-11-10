@@ -1,0 +1,27 @@
+project:
+  name: ebike_classic_choice_drift_chicago
+  title: "Same trips, more e-bikes: explainable machine learning of a year-on-year shift in bike-share vehicle choice"
+  seed: 42
+
+paths:
+  raw_divvy_dir: data/raw/divvy
+  interim: data/interim
+  processed: data/processed
+  tables: outputs/tables
+  figures: outputs/figures
+  reports: outputs/reports
+  logs: outputs/logs
+
+sources:
+  divvy:
+    url: https://divvybikes.com/system-data
+    bucket: https://divvy-tripdata.s3.amazonaws.com/
+    months: "2025-01 to 2026-10"
+    downloaded: 2026-11-09
+    licence: "Divvy Data License Agreement (no redistribution of raw files)"
+
+audit:
+  # Plausibility limits used only to FLAG records in the audit (nothing is deleted at this stage)
+  min_duration_min: 1
+  max_duration_min: 180
+  max_distance_miles: 30

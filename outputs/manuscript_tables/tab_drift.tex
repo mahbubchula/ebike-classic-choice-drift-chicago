@@ -1,0 +1,31 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\caption{Season-matched decomposition of the change in e-bike choice from 2025 to 2026 (February to October, months weighted equally), with day-block bootstrap 95\% CIs (500 replicates).}
+\label{tab:drift}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+& \multicolumn{3}{c}{Main model} & \multicolumn{3}{c}{Main + supply proxy} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+Quantity & All & Members & Casual & All & Members & Casual \\
+\midrule
+Observed change (pp) & 10.7 [10.1, 11.3] & 9.6 [9.0, 10.2] & 12.4 [11.2, 13.6] & 10.7 [10.0, 11.4] & 9.6 [9.0, 10.3] & 12.4 [11.1, 13.7] \\
+Predicted change (pp) & 0.6 [0.1, 1.0] & 0.7 [0.3, 1.0] & 0.2 [-0.7, 1.0] & 4.6 [4.2, 5.0] & 4.7 [4.3, 5.0] & 4.3 [3.4, 5.1] \\
+Observed change (log-odds) & 0.431 [0.405, 0.455] & 0.388 [0.364, 0.410] & 0.507 [0.458, 0.558] & 0.431 [0.404, 0.461] & 0.388 [0.364, 0.413] & 0.507 [0.457, 0.561] \\
+Explained change (log-odds) & 0.023 [0.005, 0.040] & 0.028 [0.014, 0.042] & 0.007 [-0.027, 0.042] & 0.183 [0.167, 0.202] & 0.188 [0.174, 0.203] & 0.170 [0.134, 0.205] \\
+Share explained (\%) & 5 [1, 9] & 7 [4, 11] & 1 [-6, 8] & 43 [40, 45] & 48 [45, 52] & 34 [28, 38] \\
+\midrule
+\multicolumn{7}{l}{\textit{Contribution of feature groups (log-odds), all riders}} \\
+Trip & \multicolumn{3}{c}{+0.004 [+0.001, +0.008]} & \multicolumn{3}{c}{+0.003 [-0.000, +0.006]} \\
+Rider & \multicolumn{3}{c}{-0.001 [-0.006, +0.003]} & \multicolumn{3}{c}{-0.001 [-0.005, +0.004]} \\
+Time & \multicolumn{3}{c}{+0.005 [-0.004, +0.015]} & \multicolumn{3}{c}{+0.003 [-0.006, +0.012]} \\
+Weather & \multicolumn{3}{c}{-0.006 [-0.018, +0.007]} & \multicolumn{3}{c}{-0.008 [-0.020, +0.005]} \\
+Origin area & \multicolumn{3}{c}{+0.013 [+0.009, +0.017]} & \multicolumn{3}{c}{-0.002 [-0.004, +0.001]} \\
+Destination area & \multicolumn{3}{c}{+0.009 [+0.006, +0.013]} & \multicolumn{3}{c}{+0.006 [+0.002, +0.009]} \\
+Station supply & \multicolumn{3}{c}{} & \multicolumn{3}{c}{+0.194 [+0.189, +0.199]} \\
+\bottomrule
+\end{tabular}
+}
+\par\vspace{2pt}\parbox{\linewidth}{\footnotesize Explained change: change in the log-odds of the mean predicted probability. Share explained: explained over observed change. The supply proxy is the station's e-bike share of departures over the previous 7 days.}
+\end{table}

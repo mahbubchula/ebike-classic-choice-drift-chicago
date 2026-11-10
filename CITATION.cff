@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "Same trips, more e-bikes: code for the explainable machine learning analysis of bike-share vehicle choice in Chicago"
+type: software
+authors:
+  - family-names: Hassan
+    given-names: Mahbub
+    email: mahbub.fkta@gmail.com
+repository-code: "https://github.com/mahbubchula/ebike-classic-choice-drift-chicago"
+license: MIT
+version: "1.0.0"
+date-released: "2026-11-10"
+abstract: "Leakage-controlled temporal modeling, SHAP explanations and a season-matched drift decomposition of e-bike versus classic-bike choice in Chicago's Divvy system, 2025 to 2026."
+keywords:
+  - bike sharing
+  - e-bikes
+  - vehicle choice
+  - explainable machine learning
+  - SHAP
+  - concept drift

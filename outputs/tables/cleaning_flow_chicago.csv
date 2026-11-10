@@ -1,0 +1,9 @@
+step,remaining,removed
+raw records,11350283,0
+drop duplicated ride_id,11350248,35
+start date within 2025-01-01 to 2026-10-31,11350195,53
+duration 1-180 min (incl. negative),11027104,323091
+end coordinates present,11026877,227
+trip starts at a docking station (both types available),8811559,2215318
+straight-line distance <= 30 km,8811527,32
+start and end inside Cook County tracts,8811485,42

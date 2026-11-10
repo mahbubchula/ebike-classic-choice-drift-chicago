@@ -1,0 +1,26 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\caption{Robustness checks and post hoc analyses. None of them changes the locked models or the locked test result.}
+\label{tab:robust}
+\begin{tabular}{p{0.36\linewidth}p{0.58\linewidth}}
+\toprule
+Analysis & Result \\
+\midrule
+R1 locked main model, test, all & AUC 0.648; log loss 0.673; mean predicted 46.3\% vs observed 56.6\% \\
+R1 main + month, test, all & AUC 0.648; log loss 0.675; mean predicted 46.2\% vs observed 56.6\% \\
+R2 January 2025 (pre-price), all & AUC 0.713; log loss 0.622; mean predicted 51.1\% vs observed 49.9\% \\
+R2 January 2025 (pre-price), members & AUC 0.716; log loss 0.619; mean predicted 48.8\% vs observed 47.7\% \\
+R2 January 2025 (pre-price), casual & AUC 0.659; log loss 0.632; mean predicted 61.9\% vs observed 60.4\% \\
+R3 rider subgroup, members & AUC 0.655; log loss 0.670; mean predicted 44.8\% vs observed 53.9\% \\
+R3 rider subgroup, casual & AUC 0.619; log loss 0.679; mean predicted 49.0\% vs observed 61.5\% \\
+R4 one-way trips only, test & AUC 0.649; log loss 0.672; mean predicted 46.7\% vs observed 57.0\% \\
+R1 month as a feature: rank of month in mean $|$SHAP$|$ & 5 of 36; share of 2025 to 2026 change explained 5\% \\
+Seed stability (5 refits) & Spearman $\rho$ of importance with locked model 0.93 to 0.98; top-10 overlap 0.8 to 0.9 \\
+Twin models, AUC on held-out days & 2025 model: 0.680 (2025), 0.639 (2026); 2026 model: 0.674 (2026), 0.639 (2025) \\
+Frozen model, 2026 (trip-weighted) & AUC 0.649; log loss 0.673; calibration intercept +0.43 \\
+Monthly intercept update, 2026 (trip-weighted) & AUC 0.649; log loss 0.649; calibration intercept +0.08 \\
+Monthly refit, 2026 (trip-weighted) & AUC 0.665; log loss 0.655; calibration intercept +0.36 \\
+\bottomrule
+\end{tabular}
+\end{table}

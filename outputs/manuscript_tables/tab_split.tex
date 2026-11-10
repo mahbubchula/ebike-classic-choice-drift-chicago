@@ -1,0 +1,18 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Temporal design (classic dock-to-dock trips).}
+\label{tab:split}
+\begin{tabular}{llrrrl}
+\toprule
+Set & Period & Trips & E-bike (\%) & Members (\%) & Use \\
+\midrule
+Excluded & 2025-01-01 to 2025-02-04 & 101,020 & 49.9 & 82.7 & Robustness check only (before 5 Feb 2025 price change) \\
+Inner training & 2025-02-05 to 2025-08-24 & 1,925,487 & 44.5 & 62.4 & Fit candidate models \\
+Embargo & 2025-08-25 to 2025-08-31 & 103,580 & 43.7 & 57.0 & Discarded (7-day gap) \\
+Validation & 2025-09-01 to 2025-12-31 & 1,085,777 & 48.5 & 66.9 & Early stopping, tuning, threshold \\
+Final training & 2025-02-05 to 2025-12-31 & 3,114,844 & 45.9 & 63.8 & Refit of the selected configuration \\
+Test & 2026-01-01 to 2026-10-31 & 3,596,794 & 56.6 & 64.9 & Single evaluation (locked) \\
+\bottomrule
+\end{tabular}
+\end{table}

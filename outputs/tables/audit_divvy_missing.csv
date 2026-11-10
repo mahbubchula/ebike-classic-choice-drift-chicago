@@ -1,0 +1,15 @@
+,n_missing,pct_missing,dtype,n_unique
+ride_id,0,0.0,str,11350248
+rideable_type,0,0.0,str,2
+started_at,0,0.0,datetime64[us],11347807
+ended_at,0,0.0,datetime64[us],11345250
+start_station_name,2383273,20.997,str,2180
+start_station_id,2383273,20.997,str,3686
+end_station_name,2499362,22.02,str,2200
+end_station_id,2499362,22.02,str,3726
+start_lat,0,0.0,float64,168189
+start_lng,0,0.0,float64,164648
+end_lat,10359,0.091,float64,2428
+end_lng,10359,0.091,float64,2420
+member_casual,0,0.0,str,2
+duration_min,0,0.0,float64,2469078

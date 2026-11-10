@@ -1,0 +1,31 @@
+\begin{table}[!htbp]
+\centering
+\scriptsize
+\caption{Predictive performance. Validation metrics guided every modelling choice; the test set was evaluated once.}
+\label{tab:performance}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+& \multicolumn{3}{c}{Validation, Sep to Dec 2025} & \multicolumn{6}{c}{Test, Jan to Oct 2026} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-10}
+Model & AUC & Log loss & Brier & AUC [95\% CI] & PR-AUC & Log loss & Brier & Bal. acc. & Cal. int. \\
+\midrule
+\multicolumn{10}{l}{\textit{Untuned candidates, main feature set}} \\
+Dummy & 0.500 & 0.696 & 0.251 & & & & & & \\
+LogReg & 0.605 & 0.678 & 0.243 & & & & & & \\
+XGBoost & 0.662 & 0.655 & 0.231 & & & & & & \\
+CatBoost & 0.660 & 0.656 & 0.232 & & & & & & \\
+LightGBM & 0.664 & 0.653 & 0.230 & & & & & & \\
+\midrule
+\multicolumn{10}{l}{\textit{Tuned and locked models}} \\
+LightGBM, main & 0.665 & 0.652 & 0.230 & 0.648 [0.645, 0.651] & 0.695 & 0.673 & 0.240 & 0.605 & +0.43 \\
+Spline LR, main & & & & 0.599 [0.597, 0.601] & 0.644 & 0.693 & 0.250 & 0.572 & +0.43 \\
+LightGBM, + supply & 0.667 & 0.649 & 0.229 & 0.656 [0.653, 0.659] & 0.703 & 0.654 & 0.231 & 0.607 & +0.26 \\
+Spline LR, + supply & & & & 0.624 [0.622, 0.626] & 0.668 & 0.667 & 0.237 & 0.580 & +0.21 \\
+LightGBM, origin only & 0.603 & 0.670 & 0.239 & 0.591 [0.589, 0.594] & 0.709 & 0.661 & 0.234 & 0.565 & +0.42 \\
+Spline LR, origin only & & & & 0.555 [0.553, 0.558] & 0.680 & 0.669 & 0.238 & 0.540 & +0.44 \\
+\bottomrule
+\end{tabular}
+}
+\par\vspace{2pt}\parbox{\linewidth}{\footnotesize CI: day-block bootstrap (200 replicates). Bal. acc.: balanced accuracy at the threshold chosen on validation (0.450 for the main model). Cal. int.: calibration intercept (positive = e-bike use under-predicted). The origin-only models use all trips starting at a classic dock, so their base rate differs.}
+\end{table}
